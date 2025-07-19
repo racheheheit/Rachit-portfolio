@@ -230,12 +230,21 @@ header.nav {
   height: 70vh;
   
 }
+  .nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: space-around;;
+  align-items: center;
+}
   .about {
     font-size: 7vw;
+    margin-top: 150px;
   }
 
   .info {
-    font-size: 4vw;
+    
+    font-size: 10px;
   }
 
   .main-buttons {
