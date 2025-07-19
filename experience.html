@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rachit Singh Rana</title>
+  <link rel="stylesheet" href="experience.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="timeline-container">
+    <h1 class="timeline-title">Experience</h1>
+
+    <div class="timeline">
+
+      <!-- Entry 1 -->
+      <div class="timeline-entry left hidden">
+        <div class="content-box">
+          <h2>Cultural Club, NIT Delhi</h2>
+          <h3>Graphic Head <span>2024 - Present</span></h3>
+          <ul>
+            <li>Led branding for 15+ Cultural events</li>
+            <li>Designed 50+ posters, brochures, stage backdrops</li>
+            <li>Managed 5+ designers to ensure quality delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Entry 2 -->
+      <div class="timeline-entry right hidden">
+        <div class="content-box">
+          <h2>Training & Placement Cell, NIT Delhi</h2>
+          <h3>Graphic Designer <span>2025 - Present</span></h3>
+          <ul>
+            <li>Co-designed Placement Brochure 2025</li>
+            <li>Created 30+ LinkedIn creatives for outreach</li>
+            <li>Helped drive a 3× increase in engagement</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="timeline-entry left hidden">
+        <div class="content-box">
+          <h2>Technical Club, NIT Delhi</h2>
+          <h3>Graphic Designer <span>2024 - Present</span></h3>
+          <ul>
+            <li>Led creating content and posts for Instagram</li>
+            <li>Designed 50+ posters, brochures, stage backdrops</li>
+            <li>Managed to deliver the work with expected time</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script>
+    // Animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.timeline-entry').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

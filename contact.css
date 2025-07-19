@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1d1919;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #e50914;
+}
+
+/* Profile Image */
+.image {
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 15px;
+  width: 180px;
+  margin: 0 auto 40px;
+}
+
+.image img {
+  width: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+}
+
+.contact-card h2 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.contact-card img {
+  width: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  color: #ffffff;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .image {
+    width: 140px;
+    padding: 10px;
+  }
+
+  .image img {
+    width: 120px;
+  }
+}

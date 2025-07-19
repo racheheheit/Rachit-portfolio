@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rachit Singh Rana</title>
+  <link rel="stylesheet" href="watching.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fascinate&family=Jersey+10&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="logo.png" type="image/png">
+
+<script src="index.js"></script>
+   
+
+
+</head>
+<body>
+
+
+  <video id="intro-video" playsinline unmuted>
+    <source src="intro.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+  </video>
+
+
+  <button id="explore-btn">Explore</button>
+
+
+  <div id="main-content">
+    <h1>Who's watching?</h1>
+    
+    <div class="box">
+      <div class="imgbox">
+        <a href="recruiter.html". onclick="setMode('recruiter')"><img src="recruiter.png" alt="recruiter" /></a>
+        <div>Recruiter</div>
+      </div>
+      <div class="imgbox">
+        <a href="developer.html". onclick="setMode('developer')"><img src="developer.png" alt="developer" /></a>
+        <div>Developer</div>
+      </div>
+      <div class="imgbox">
+        <a href="stalker.html". onclick="setMode('stalker')"><img src="stalker.png" alt="stalker" /></a>
+        <div>Stalker</div>
+      </div>
+      <div class="imgbox">
+        <a href="designer.html" onclick="setMode('designer')"><img src="designer.png" alt="designer" /></a>
+        <div>Designer</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById("intro-video");
+    const button = document.getElementById("explore-btn");
+    const content = document.getElementById("main-content");
+
+    button.addEventListener("click", async () => {
+      button.style.display = "none";
+      video.classList.add("fade-in");
+      video.style.pointerEvents = "auto";
+      video.play();
+
+
+      setTimeout(() => {
+        video.style.opacity = 1;
+      }, 1000);
+    });
+
+    video.addEventListener("ended", () => {
+      video.classList.remove("fade-in");
+      video.classList.add("fade-out");
+
+      // After fade-out, remove video and show main content
+      setTimeout(() => {
+        video.style.display = "none";
+        content.style.display = "block";
+        content.classList.add("fade-in");
+        content.style.opacity = 1;
+      }, 1000); // matches animation duration
+    });
+  </script>
+
+</body>
+</html>
